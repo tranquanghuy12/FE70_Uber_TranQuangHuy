@@ -13,7 +13,6 @@ function loaiXe() {
   return loaiXe;
 }
 
-
 function ThanhTien(soKM, thoiGianCho) {
   var thanhTien; //tổng tiền
   var lx = loaiXe(); //loại xe
@@ -58,7 +57,6 @@ function ThanhTien(soKM, thoiGianCho) {
   return thanhTien;
 }
 
-
 document.getElementById("btnTinhTien").onclick = function () {
   var soKM = document.getElementById("soKM").value;
   soKM = Number(soKM);
@@ -72,7 +70,6 @@ document.getElementById("btnTinhTien").onclick = function () {
 
   xuatTien.innerHTML = Number(thanhTien);
 };
-
 
 document.getElementById("hoaDon").onclick = function () {
   var tblHoaDon = document.getElementById("tblHoaDon");
@@ -108,39 +105,10 @@ document.getElementById("hoaDon").onclick = function () {
   var tdTongTien = document.createElement("td");
   tdTongTien.innerHTML = thanhTien;
 
-  // for (i = 0; i < soKM.length; i++) {
-  //   if (i) {
-  //     tdSoKM.innerHTML = soKM[i];
-  //   } else if (i + 1) {
-  //     soKM.splice(i, 1);
-  //     tdSoKM.innerHTML = soKM[i + 1];
-  //   }
-  // }
-  // Tạo nút button xóa
-  // var btnXoa = document.createElement("button");
-  // btnXoa.className = "btn btn-danger";
-  // btnXoa.innerHTML = "Xóa";
-  // btnXoa.onclick = function () {
-  //   // Dom đến thẻ cha chứa button xóa
-  //   // var tdChuaButton = btnXoa.parentElement;
-  //   // var trSV = tdChuaButton.parentElement;
-  //   // trSV.remove();
-
-  //   // Thay vì làm như trên, thì có thể
-  //   // Dom đến thẻ gần nhất chứa selector đó
-  //   var tr = btnXoa.closest("tr");
-  //   tr.remove();
-  // };
-
-  // Tạo td cho nút xóa
-  // var tdChucNang = document.createElement("td");
-  // tdChucNang.appendChild(btnXoa);
-
   trHoaDon.appendChild(tdLoaiXe);
   trHoaDon.appendChild(tdSoKM);
   trHoaDon.appendChild(tdThoiGianCho);
   trHoaDon.appendChild(tdTongTien);
-  // trHoaDon.appendChild(tdChucNang);
 
   tblHoaDon.appendChild(trHoaDon);
 };
